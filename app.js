@@ -150,7 +150,7 @@ class App {
         quipService.setLogger(this.Logger);
 
         if(!await quipService.checkUser()) {
-            console.log(colors.red('ERROR: Token is wrong or expired.'));
+            console.log(colors.red('ERROR: could not retrieve user. Check logs for incorrect token or useage limitations.'));
             return;
         }
 
